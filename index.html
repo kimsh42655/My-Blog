@@ -11,7 +11,7 @@
                 <h1>SH BLOG</h1>
                 <p>Only I can change my life.<br>No one can do it for me.</p>
             </section>
-            <section id="menu_wrap">
+            <section class="menu_wrap">
                 <nav>
                     <ul>
                         <li class="menu" data-page="1" id="menu1"><a>ABOUT<br>WEB</a></li>
@@ -22,19 +22,44 @@
             </section>
         </header>
         <aside>
-            <div class="home_button">
-                <h2>SH<br>BLOG</h2>
+            <div class="sidebar">
+                <div class="home_button">
+                    <h2><a>SH Blog</a></h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="sidemenu"><a data-page="1">WEB</a></li>
+                        <li class="sidemenu"><a data-page="2">ALGORITHM</a></li>
+                        <li class="sidemenu"><a data-page="3">ELSE</a></li>
+                    </ul>
+                </nav>
             </div>
         </aside>
         <section class="content" id="content1">
-            content1
+            <div class="content_title">
+                <h2>WEB</h2>
+                <p>html, css, js 부터 시작하는 웹개발</p>
+            </div>
+            <div class="content_list"></div>
         </section>
         <section class="content" id="content2">
-            content2
+            <div class="content_title">
+                <h2>ALGORITHM</h2>
+                <p>백준 문제풀이로 알아보는 알고리즘</p>
+            </div>
+            <div class="content_list"></div>
         </section>
         <section class="content" id="content3">
-            content3
+            <div class="content_title">
+                <h2>ELSE</h2>
+                <p>그외 기타등등</p>
+            </div>
+            <div class="content_list"></div>
         </section>
+        <footer>
+            <address>Contact: kimsh4265@korea.ac.kr</address>
+            <p>Copyright 2021. Kim Seong Hyeon all right reserved.</p>
+        </footer>
         <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="./js/ui.js"></script>
     </body>

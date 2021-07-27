@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, del, 
 dfn, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, 
@@ -8,6 +10,7 @@ td, hr{
     margin:0;
     padding:0;
     font-size:100%;
+    font-style: normal;
     box-sizing: border-box;
 }
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
@@ -85,12 +88,12 @@ header #title p {
 header.start #title h1, header.start #title p{
     left: 25%;
 }
-header #menu_wrap{
+header .menu_wrap{
     width: 100%;
     height: 30%;
     position: relative;
 }
-header #menu_wrap nav {
+header .menu_wrap nav {
     position: absolute;
     width: 100%;
     height: 130%;
@@ -98,13 +101,13 @@ header #menu_wrap nav {
     left: 0%;
     overflow: hidden;
 }
-header #menu_wrap nav ul {
+header .menu_wrap nav ul {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
 }
-header #menu_wrap nav ul li.menu {
+header .menu_wrap nav ul li.menu {
     width: 250px;
     height: 260px;
     z-index: 12;
@@ -113,14 +116,14 @@ header #menu_wrap nav ul li.menu {
     transition:all .8s;
     cursor: pointer;
 }
-header.start #menu_wrap nav ul li.menu {
+header.start .menu_wrap nav ul li.menu {
     margin-top: 30px;
 }
-header #menu_wrap nav ul li.menu:hover {
+header .menu_wrap nav ul li.menu:hover {
     margin-top: 0;
     transition: all .2s;
 }
-header #menu_wrap nav ul li.menu:before{
+header .menu_wrap nav ul li.menu:before{
     content: "";
     display: block;
     position: absolute;
@@ -130,7 +133,7 @@ header #menu_wrap nav ul li.menu:before{
     height: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.8),rgba(0,0,0,0))
 }
-header #menu_wrap nav ul li.menu a {
+header .menu_wrap nav ul li.menu a {
     font-family: 'Rubik', sans-serif;
     font-size: 30px;
     color: white;
@@ -138,78 +141,150 @@ header #menu_wrap nav ul li.menu a {
     top: 160px;
     left: 20px;
 }
-header #menu_wrap nav ul li#menu1 {
+header .menu_wrap nav ul li#menu1 {
     background: url(../image/menu1_bg.jpg) no-repeat;
     background-size: auto 260px;
     transition-delay: .5s;
 }
-header #menu_wrap nav ul li#menu2 {
+header .menu_wrap nav ul li#menu2 {
     background: url(../image/menu2_bg.jpg) no-repeat;
     background-size: auto 260px;
     transition-delay: 0.8s;
 }
-header #menu_wrap nav ul li#menu3 {
+header .menu_wrap nav ul li#menu3 {
     background: url(../image/menu3_bg.jpg) no-repeat;
     background-size: 250px auto;
     transition-delay: 1.1s;
 }
+aside {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: -70px;
+    left: 0;
+    transition: all .4s;
+    z-index: 20;
+    transition-delay: 0s;
+    background: rgba(255,255,255,0.8);
+
+}
+aside .sidebar{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    padding: 10px 200px;
+    display: flex;
+    justify-content: center;
+}
+aside.clicked {
+    top: 0;
+    transition-delay: .6s;
+}
+aside .sidebar .home_button{
+    width: 155px;
+    height: 50px;
+    display: block;
+    z-index: 22;
+    text-align: center;
+    cursor: pointer;
+}
+aside .sidebar h2{
+    color: black;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: 'Zen Loop', cursive;
+}
+aside .sidebar nav {
+    display: block;
+    height: 50px;
+    margin-left: auto;
+}
+aside .sidebar nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+aside .sidebar nav ul li.sidemenu {
+    margin: 0 0 0px 20px;
+    z-index: 22;
+}
+aside .sidebar nav ul li.sidemenu a {
+    font-size: 30px;
+    color: black;
+    font-weight: 300;
+    font-family: 'Noto Sans KR', sans-serif;
+    cursor: pointer;
+}
+aside .sidebar nav ul li.sidemenu a:hover {
+    color: #BDBDBD;
+}
 .content {
     width: 100%;
-    max-width: 1920px;
     height: 100%;
-    padding-right: 300px;
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translate(-50%, 0%);
     transition: all .6s;
     z-index: 10;
+    overflow-y: auto;
 }
 .content.clicked {
     top: 0;
 }
-aside {
-    width: 300px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    transition: all .6s;
-    z-index: 20;
-    transition-delay: 0s;
-    background: url(../image/sidebar_bg.jpg) no-repeat;
-    background-size: auto 100%;
+.content .content_title{
+    width: 100%;
+    height: 600px;
+    background-size: 1920px auto;
+    background-position: center center;
+    position: relative;
 }
-aside:before {
-    content: "";
+.content#content1 .content_title {
+    background: url(../image/content1_title_bg.jpg) no-repeat;
+}
+.content#content2 .content_title {
+    background: url(../image/content2_title_bg.jpg) no-repeat;
+}
+.content#content3 .content_title {
+    background: url(../image/content3_title_bg.jpg) no-repeat;
+}
+.content .content_title:before{
+    content:"";
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 21;
+    background: rgba(0,0,0,0.8);
 }
-aside.clicked {
-    right: 0;
-    transition-delay: .6s;
-}
-aside .home_button{
-    width: 200px;
-    height: 170px;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    z-index: 22;
-    text-align: center;
-    border-bottom: 1px solid white;
-    cursor: pointer;
-}
-aside h2{
+.content .content_title h2 {
     color: white;
-    font-size: 60px;
-    font-weight: 500;
-    font-family: 'Zen Loop', cursive;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 250px;
+    font-weight: 700;
+    z-index: 11;
+}
+.content .content_title p {
+    color: white;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    z-index: 11;
+}
+.content .content_list{
+    width: 100%;
+}
+footer {
+    opacity: 0;
 }
