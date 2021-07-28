@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, del, 
 dfn, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, 
@@ -26,6 +28,7 @@ ul{
 }
 a{
     text-decoration: none;
+    color: black;
 }
 html, body{
     height: 100%;
@@ -160,7 +163,7 @@ aside {
     width: 100%;
     height: 70px;
     position: fixed;
-    top: -70px;
+    top: -140px;
     left: 0;
     transition: all .4s;
     z-index: 20;
@@ -171,7 +174,7 @@ aside {
 aside .sidebar{
     margin: 0 auto;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1600px;
     height: 100%;
     padding: 10px 200px;
     display: flex;
@@ -179,7 +182,7 @@ aside .sidebar{
 }
 aside.clicked {
     top: 0;
-    transition-delay: .6s;
+    transition-delay: .5s;
 }
 aside .sidebar .home_button{
     width: 155px;
@@ -190,10 +193,10 @@ aside .sidebar .home_button{
     cursor: pointer;
 }
 aside .sidebar h2{
-    color: black;
     font-size: 50px;
     font-weight: 800;
     font-family: 'Zen Loop', cursive;
+    color: black;
 }
 aside .sidebar nav {
     display: block;
@@ -218,7 +221,7 @@ aside .sidebar nav ul li.sidemenu a {
     cursor: pointer;
 }
 aside .sidebar nav ul li.sidemenu a:hover {
-    color: #BDBDBD;
+    color: #A4A4A4;
 }
 .content {
     width: 100%;
@@ -240,6 +243,7 @@ aside .sidebar nav ul li.sidemenu a:hover {
     background-size: 1920px auto;
     background-position: center center;
     position: relative;
+    margin-bottom: 100px;
 }
 .content#content1 .content_title {
     background: url(../image/content1_title_bg.jpg) no-repeat;
@@ -263,7 +267,7 @@ aside .sidebar nav ul li.sidemenu a:hover {
 .content .content_title h2 {
     color: white;
     position: absolute;
-    top: 120px;
+    top: 130px;
     left: 50%;
     transform: translate(-50%,0%);
     font-family: 'Roboto', sans-serif;
@@ -284,7 +288,71 @@ aside .sidebar nav ul li.sidemenu a:hover {
 }
 .content .content_list{
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
-footer {
+hr {
+    margin: 40px 0px;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.content .content_list .page_link {
+    width: 100%;
+    min-height: 200px;
+    padding-right: 15px;
+    word-break: keep-all;
+    transition: all .3s;
+}
+.content .content_list .page_link:hover {
+    transform: translate(15px,0);
+}
+.content .content_list .page_link:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 5px;
+    height: 100%;
+    background-color: skyblue;
     opacity: 0;
+    transition: all .3s;
+}
+.content .content_list .page_link:hover:before{
+    opacity: 1;
+}
+.content .content_list .page_link h3 {
+    font-size: 50px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-weight: 400;
+    line-height: 115%;
+    margin-bottom: 25px;
+    color: black;
+    transition: all .3s;
+}
+.content .content_list .page_link:hover h3 {
+    color: skyblue;
+}
+.content .content_list .page_link p {
+    font-size:  25px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 200;
+    color: #A4A4A4;
+    margin-bottom: 20px;
+}
+.content .content_list .page_link .post_date {
+    font-size:  20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 200;
+    color: #A4A4A4;
+}
+.content footer {
+    width: 100%;
+    padding: 50px 0 50px 0;
+    margin-top: 100px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 15px;
+    color: #6c757d;
+    font-weight: 100;
 }
