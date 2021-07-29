@@ -1,0 +1,122 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    .content_page {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transition: all .6s;
+        z-index: 15;
+        overflow-y: auto;
+        background-color: white;
+    }
+    .content_page .page_title{
+        width: 100%;
+        height: 700px;
+        background-size: 1920px auto;
+        background-position: center center;
+        position: relative;
+        margin-bottom: 100px;
+        background: url(../image/page_title_bg.jpg) no-repeat;
+    }
+    .content_page .page_title:before{
+        content:"";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+    }
+    .content_page .page_title .title_wrap {
+        display: block;
+        width: 70%;
+        max-width: 800px;
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translate(-50%,0%);
+    }
+    .content_page .page_title h3 {
+        color: white;
+        font-size: 50px;
+        font-family: 'Do Hyeon', sans-serif;
+        font-weight: 400;
+        line-height: 115%;
+        z-index: 16;
+        margin-bottom: 60px;
+    }
+    .content_page .page_title p {
+        color: white;
+        font-size:  25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 100;
+        line-height: 140%;
+        z-index: 16;
+        margin-bottom: 60px;
+    }
+    .content_page .page_title .post_date {
+        color: white;
+        font-size:  20px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 100;
+        text-align: right;
+    }
+    .content_page .page_main {
+        width: 700px;
+        margin: 0 auto;
+    }
+    .content_page .page_main p {
+        font-size:  20px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 100;
+        line-height: 170%;
+        margin-bottom: 30px;
+    }
+    .content_page .page_main h4 {
+        font-size:  30px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 500;
+        line-height: 170%;
+        margin-bottom: 30px;
+        margin-top: 100px;
+    }
+    .content_page .page_main img {
+        width: 600px;
+        margin-left: 20px;
+    }
+    footer {
+        width: 100%;
+        padding: 50px 0 50px 0;
+        margin-top: 100px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        text-align: center;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 15px;
+        color: #6c757d;
+        font-weight: 100;
+    }
+</style>
+
+<!--다 쓰고 comtent_page 안에꺼만 빼서 저장-->
+<!--이미지 태그 경로도 index 기준으로 수정-->
+<div class="content_page">
+    <div class="page_title">
+        <div class="title_wrap">
+            <h3>여기다가 글 제목 쓰기</h3>
+            <p>여기다가 글에 대한 간단한 설명 쓰기</p>
+            <div class="post_date">여긴 쓴 날짜(20xx.xx.xx)</div>
+        </div>
+    </div>
+    <div class="page_main">
+        여따가 h4 랑 p 랑 img 태그 쓰면서 본문 작성
+    </div>
+    <footer>
+        <address>Contact: kimsh4265@korea.ac.kr</address>
+        <p>Copyright 2021. Kim Seong Hyeon all right reserved.</p>
+    </footer>
+</div>
+
