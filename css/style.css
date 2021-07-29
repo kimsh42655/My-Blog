@@ -28,7 +28,6 @@ ul{
 }
 a{
     text-decoration: none;
-    color: black;
 }
 html, body{
     height: 100%;
@@ -219,6 +218,7 @@ aside .sidebar nav ul li.sidemenu a {
     font-weight: 300;
     font-family: 'Noto Sans KR', sans-serif;
     cursor: pointer;
+    transition: all .2s;
 }
 aside .sidebar nav ul li.sidemenu a:hover {
     color: #A4A4A4;
@@ -228,8 +228,6 @@ aside .sidebar nav ul li.sidemenu a:hover {
     height: 100%;
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0%);
     transition: all .6s;
     z-index: 10;
     overflow-y: auto;
@@ -302,6 +300,7 @@ hr {
     padding-right: 15px;
     word-break: keep-all;
     transition: all .3s;
+    cursor: pointer;
 }
 .content .content_list .page_link:hover {
     transform: translate(15px,0);
@@ -345,7 +344,7 @@ hr {
     font-weight: 200;
     color: #A4A4A4;
 }
-.content footer {
+footer {
     width: 100%;
     padding: 50px 0 50px 0;
     margin-top: 100px;
@@ -355,4 +354,81 @@ hr {
     font-size: 15px;
     color: #6c757d;
     font-weight: 100;
+}
+.content_page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    transition: all .6s;
+    z-index: 15;
+    overflow-y: auto;
+    background-color: white;
+}
+.content_page.clicked {
+    top: 0;
+}
+.content_page .page_title{
+    width: 100%;
+    height: 800px;
+    background-size: 1920px auto;
+    background-position: center center;
+    position: relative;
+    margin-bottom: 100px;
+    background: url(../image/page_title_bg.jpg) no-repeat;
+}
+.content_page .page_title:before{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+.content_page .page_title .title_wrap {
+    display: block;
+    width: 70%;
+    max-width: 800px;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+.content_page .page_title h3 {
+    color: white;
+    font-size: 50px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-weight: 400;
+    line-height: 115%;
+    z-index: 16;
+    margin-bottom: 60px;
+}
+.content_page .page_title p {
+    color: white;
+    font-size:  25px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 100;
+    line-height: 120%;
+    z-index: 16;
+    margin-bottom: 60px;
+}
+.content_page .page_title .post_date {
+    color: white;
+    font-size:  20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 100;
+    text-align: right;
+}
+.content_page .page_main {
+    width: 700px;
+    margin: 0 auto;
+}
+.content_page .page_main p {
+    font-size:  20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 100;
+    line-height: 170%;
+    margin-bottom: 30px;
 }
